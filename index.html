@@ -10,14 +10,26 @@
   </head>
   <body>
     <main class="page-shell">
-      <section class="intro" aria-labelledby="page-title">
-        <p class="eyebrow">shiba-studios.com</p>
-        <h1 id="page-title">Kalendarz adwentowy Shiba Studios</h1>
-        <p class="lead">Otwórz dowolne okienko. Na razie każde jest dostępne, żeby łatwo przetestować działanie strony przed dodaniem docelowych niespodzianek.</p>
-      </section>
+      <section class="calendar-board" aria-labelledby="page-title">
+        <div class="snowfall" aria-hidden="true"></div>
+        <header class="board-header">
+          <p class="eyebrow">shiba-studios.com</p>
+          <h1 id="page-title">Kalendarz adwentowy</h1>
+        </header>
 
-      <section class="calendar" aria-label="24 okienka kalendarza adwentowego">
-        <div class="calendar-grid" id="calendarGrid"></div>
+        <div class="light-string" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <section class="calendar" aria-label="24 okienka kalendarza adwentowego">
+          <div class="calendar-grid" id="calendarGrid"></div>
+        </section>
+
+        <div class="decor decor-candle" aria-hidden="true"></div>
+        <div class="decor decor-gift" aria-hidden="true"></div>
+        <div class="decor decor-candy" aria-hidden="true"></div>
+        <div class="decor decor-tree" aria-hidden="true"></div>
       </section>
     </main>
 

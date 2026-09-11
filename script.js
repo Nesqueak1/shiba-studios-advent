@@ -4,10 +4,13 @@ const modalDay = document.querySelector("#modalDay");
 const modalTitle = document.querySelector("#modalTitle");
 const modalText = document.querySelector("#modalText");
 
-const surprises = Array.from({ length: 24 }, (_, index) => {
-  const day = index + 1;
+const dayOrder = [1, 14, 3, 22, 5, 18, 7, 10, 19, 2, 11, 24, 13, 6, 15, 8, 17, 4, 21, 20, 9, 12, 23, 16];
+const decorations = ["", "⭐", "", "🧦", "", "🎄", "", "🦌", "⭐", "🍭", "", "🎁", "✨", "", "🔴", "", "❄️", "", "⭐", "🎁", "", "🧦", "✨", "⭐"];
+
+const surprises = dayOrder.map((day, index) => {
   return {
     day,
+    decor: decorations[index],
     title: `Niespodzianka dnia ${day}`,
     text: `To jest przykładowa treść dla okienka numer ${day}. Później możesz tu wstawić docelowy tekst, link, kod rabatowy albo obraz.`
   };
@@ -20,6 +23,7 @@ function createDayButton(item) {
   button.className = "day-card";
   button.type = "button";
   button.setAttribute("aria-label", `Otwórz okienko ${item.day}`);
+  button.dataset.decor = item.decor;
   button.innerHTML = `
     <span class="day-number">${item.day}</span>
     <span class="day-label">Otwórz</span>
