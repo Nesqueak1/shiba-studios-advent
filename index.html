@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shiba Studios - Kalendarz adwentowy</title>
+    <meta name="description" content="Kalendarz adwentowy Shiba Studios z 24 okienkami do odkrywania.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23112840'/%3E%3Cpath d='M18 24 28 12l4 11 4-11 10 12-4 22H22z' fill='%23f6c76d'/%3E%3Ccircle cx='26' cy='31' r='3' fill='%23112840'/%3E%3Ccircle cx='38' cy='31' r='3' fill='%23112840'/%3E%3Cpath d='M28 40c2.4 2 5.6 2 8 0' fill='none' stroke='%23112840' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">shiba-studios.com</p>
+        <h1 id="page-title">Kalendarz adwentowy Shiba Studios</h1>
+        <p class="lead">Otwórz dowolne okienko. Na razie każde jest dostępne, żeby łatwo przetestować działanie strony przed dodaniem docelowych niespodzianek.</p>
+      </section>
+
+      <section class="calendar" aria-label="24 okienka kalendarza adwentowego">
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </section>
+    </main>
+
+    <div class="modal" id="dayModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" aria-label="Zamknij okno" data-close-modal>&times;</button>
+        <p class="modal-kicker">Okienko <span id="modalDay">1</span></p>
+        <h2 id="modalTitle">Świąteczna niespodzianka</h2>
+        <div class="modal-image" aria-hidden="true">
+          <span>Tu może być obraz</span>
+        </div>
+        <p id="modalText">Przykładowa treść do podmiany później.</p>
+      </article>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
